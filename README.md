@@ -21,4 +21,7 @@ In the default configuration you will have:
 
 API Url:-
 
-http://localhost:8080/
+
+API Url:-
+* curl http://localhost:8080/api/autoattendent
+* curl http://localhost:8080/api/huntgroup
