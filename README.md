@@ -7,7 +7,7 @@ The architecture is composed by four services:
 * api-gateway: API Gateway created with Zuul that uses the discovery-service to send the requests to the services. It uses Ribbon as Load Balancer
 * huntgroup-service: Simple REST service created with Spring Boot to use as an example
 * autoattendent-service: Simple REST service created with Spring Boot to use as an example
-The services: api-gateway, article-service and author-service are already configured with Hystrix (latency and fault tolerance library) and are providing a stream that you can use to monitor with a Hystrix/Turbine dashboard. You can check the Hystrix Stream accessing the service URL with /hystrix.stream (example: http://localhost:8765/hystrix.stream)
+The services: api-gateway, article-service and author-service are already configured with Hystrix (latency and fault tolerance library) and are providing a stream that you can use to monitor with a Hystrix/Turbine dashboard. You can check the Hystrix Stream accessing the service URL with /hystrix.stream (example: http://localhost:8080/hystrix.stream)
 
 How to use
 To test this architecture you will need to have: JDK 8+, Docker and Maven installed
