@@ -5,7 +5,7 @@ server:
 # Spring config
 spring:
   application:
-    name: autoattend-service
+    name: autoattendent-service
   logging:
     level:
       org.springframework: WARN

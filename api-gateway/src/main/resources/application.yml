@@ -24,17 +24,17 @@ eureka:
 
 # Ribbon config
 ribbon:
-  eureka:
+   eureka:
     enabled: true
 
 # Zuul config
 zuul:
   prefix: /api
   routes:
-    articles:
+    autoattendents:
       path: /autoattendent/**
       serviceId: autoattendent-service
-    authors:
+    huntgroups:
       path: /huntgroup/**
       serviceId: huntgroup-service
 

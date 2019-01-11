@@ -3,14 +3,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.logging.Logger;
-import java.util.stream.Collectors;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.microservices.autoattendent.bean.Group;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @RestController
 public class AutoAttendController {
@@ -27,21 +26,8 @@ public class AutoAttendController {
 		this.groups.add(new Group(5, "Group 5", new Date(), 1));
 	}
 
-	@RequestMapping(path = "/{id}", method = RequestMethod.GET)
-	public Group findById(@PathVariable("id") Integer id) {
-		this.logger.info(String.format("Groups.findById(%d)", id));
-		return this.groups.stream().filter(article -> article.getId().intValue() == id.intValue()).findFirst().get();
-	}
-
-	@RequestMapping(path = "/autoattendent/{groupId}", method = RequestMethod.GET)
-	public List<Group> findByAuthor(@PathVariable("groupId") final Integer groupId) {
-		this.logger.info(String.format("Groups.findByGroup(%d)", groupId));
-		return this.groups.stream().filter(article -> article.getAuthorId().intValue() == groupId.intValue())
-				.collect(Collectors.toList());
-	}
-
 	@HystrixCommand(fallbackMethod = "getAllCached")
-	@RequestMapping(path = "/autoattendents", method = RequestMethod.GET)
+	@RequestMapping(path = "/", method = RequestMethod.GET)
 	public List<Group> getAll() {
 		this.logger.info("Groups.getAll()");
 		return this.groups;
