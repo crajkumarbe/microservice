@@ -3,12 +3,12 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER Wendell Adriel <polu.java@gmail.com>
 
 # Set ENV variables
-ENV PORT=8081
-ENV DISCOVERY_URL="http://discovery:8761"
+ENV PORT=8082
+ENV DISCOVERY_URL="http://discovery:8083"
 
 # Add JAR file and run it as entrypoint
-ADD target/-service.jar app.jar
+ADD target/huntgroup-service.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 # Expose the port
-EXPOSE 8081
+EXPOSE 8082
