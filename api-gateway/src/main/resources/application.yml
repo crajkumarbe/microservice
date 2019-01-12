@@ -32,10 +32,10 @@ zuul:
   prefix: /api
   routes:
     autoattendents:
-      path: /autoattendent/**
+      path: /autoattendents/**
       serviceId: autoattendent-service
     huntgroups:
-      path: /huntgroup/**
+      path: /huntgroups/**
       serviceId: huntgroup-service
 
 endpoints:

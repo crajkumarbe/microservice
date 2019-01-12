@@ -12,7 +12,7 @@ import com.microservices.huntgroup.bean.Group;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 @RestController
-@RequestMapping(value="/groups")
+@RequestMapping
 public class HuntGroupController {
 
 	private List<Group> groups;
