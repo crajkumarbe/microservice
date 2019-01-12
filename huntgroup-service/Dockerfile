@@ -1,6 +1,6 @@
 # Alpine because it's lighter
 FROM openjdk:8-jdk-alpine
-MAINTAINER Wendell Adriel <polu.java@gmail.com>
+MAINTAINER Ramamohan <polu.java@gmail.com>
 
 # Set ENV variables
 ENV PORT=8082
