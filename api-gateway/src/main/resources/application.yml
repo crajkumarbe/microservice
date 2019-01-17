@@ -31,12 +31,12 @@ ribbon:
 zuul:
   prefix: /api
   routes:
-    autoattendents:
-      path: /autoattendents/**
-      serviceId: autoattendent-service
-    huntgroups:
-      path: /huntgroups/**
-      serviceId: huntgroup-service
+    customers:
+      path: /customers/**
+      serviceId: customer-service
+    orders:
+      path: /orders/**
+      serviceId: order-service
 
 endpoints:
   routes:

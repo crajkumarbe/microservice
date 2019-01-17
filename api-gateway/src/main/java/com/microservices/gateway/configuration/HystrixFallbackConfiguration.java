@@ -21,7 +21,7 @@ public class HystrixFallbackConfiguration {
 
             @Override
             public String getRoute() {
-                return "autoattendent-service";
+                return "order-service";
             }
 
             @Override
