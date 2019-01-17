@@ -23,9 +23,6 @@ Note:- For running the indivisual java applications use fallowing commad.
   mvn spring-boot-run
 
 API Url:-
-
-
-API Url:- 
 Open browser or curl hit the fallowing urls 
 * http://localhost:8080/api/orders
 * http://localhost:8080/api/customers
