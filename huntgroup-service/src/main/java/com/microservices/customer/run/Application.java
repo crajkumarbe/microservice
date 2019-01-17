@@ -1,4 +1,4 @@
-package com.microservices.huntgroup.run;
+package com.microservices.customer.run;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.cisco</groupId>
-    <artifactId>autoattendent-service</artifactId>
+    <artifactId>order-service</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
@@ -57,13 +57,13 @@
     </dependencyManagement>
 
     <build>
-        <finalName>autoattendent-service</finalName>
+        <finalName>order-service</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.microservices.autoattendent.run.Application</mainClass>
+                    <mainClass>com.microservices.order.run.Application</mainClass>
                     <addResources>true</addResources>
                 </configuration>
                 <executions>

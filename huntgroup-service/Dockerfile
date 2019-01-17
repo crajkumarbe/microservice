@@ -7,7 +7,7 @@ ENV PORT=8082
 ENV DISCOVERY_URL="http://discovery:8083"
 
 # Add JAR file and run it as entrypoint
-ADD target/huntgroup-service.jar app.jar
+ADD target/customer-service.jar app.jar
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 
 # Expose the port

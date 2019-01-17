@@ -5,7 +5,7 @@ server:
 # Spring config
 spring:
   application:
-    name: huntgroup-service
+    name: customer-service
   logging:
     level:
       org.springframework: WARN
